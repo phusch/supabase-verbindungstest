@@ -1,223 +1,112 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huschel Speicher-Test</title>
+<style>
+* { box-sizing: border-box; }
+body { background:#f3f5f8; font-family:Arial,sans-serif; padding:20px; color:#172337; }
+main { max-width:430px; margin:20px auto; }
+.card { background:white; padding:20px; border-radius:14px; margin-bottom:15px; }
+label { display:block; margin-top:10px; }
+input,button { width:100%; padding:13px; margin:7px 0; font-size:16px; border-radius:8px; }
+input { border:1px solid #ccc; }
+button { background:#1769b3; color:white; border:0; cursor:pointer; }
+button:disabled { opacity:.5; cursor:not-allowed; }
+#status { background:#fff0cc; padding:14px; border-radius:10px; margin-bottom:15px; font-weight:bold; }
+pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+small { color:#64748b; }
+</style>
 </head>
 <body>
-<p class="p1"><br></p>
-<p class="p2">&lt;!DOCTYPE html&gt;</p>
-<p class="p2">&lt;html lang="de"&gt;</p>
-<p class="p2">&lt;head&gt;</p>
-<p class="p2">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p2">&lt;meta name="viewport"</p>
-<p class="p2"><span class="Apple-converted-space"> </span>content="width=device-width, initial-scale=1"&gt;</p>
-<p class="p2">&lt;title&gt;Huschel Speicher-Test&lt;/title&gt;</p>
-<p class="p2">&lt;style&gt;</p>
-<p class="p2">body {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>background:#f3f5f8;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>font-family:Arial,sans-serif;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>padding:20px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>color:#172337;</p>
-<p class="p2">}</p>
-<p class="p2">main {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>max-width:430px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>margin:20px auto;</p>
-<p class="p2">}</p>
-<p class="p2">.card {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>background:white;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>padding:20px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>border-radius:14px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>margin-bottom:15px;</p>
-<p class="p2">}</p>
-<p class="p2">input,button {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>width:100%;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>box-sizing:border-box;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>padding:13px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>margin:7px 0;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>font-size:16px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>border-radius:8px;</p>
-<p class="p2">}</p>
-<p class="p2">input { border:1px solid #ccc; }</p>
-<p class="p2">button {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>background:#1769b3;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>color:white;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>border:0;</p>
-<p class="p2">}</p>
-<p class="p2">button:disabled { opacity:.5; }</p>
-<p class="p2">#status {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>background:#fff0cc;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>padding:14px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>border-radius:10px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>margin-bottom:15px;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>font-weight:bold;</p>
-<p class="p2">}</p>
-<p class="p2">pre {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>white-space:pre-wrap;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>overflow-wrap:anywhere;</p>
-<p class="p2">}</p>
-<p class="p2">&lt;/style&gt;</p>
-<p class="p2">&lt;/head&gt;</p>
-<p class="p2">&lt;body&gt;</p>
-<p class="p2">&lt;main&gt;</p>
-<p class="p2">&lt;h2&gt;Huschel App Speicher&lt;/h2&gt;</p>
-<p class="p2">&lt;div id="status"&gt;🟡 Noch nicht angemeldet&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;div class="card"&gt;</p>
-<p class="p2">&lt;label&gt;Supabase Publishable Key&lt;/label&gt;</p>
-<p class="p2">&lt;input id="key" placeholder="sb_publishable_..."</p>
-<p class="p2"><span class="Apple-converted-space"> </span>autocomplete="off"&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;label&gt;E-Mail&lt;/label&gt;</p>
-<p class="p2">&lt;input id="email" type="email"</p>
-<p class="p2"><span class="Apple-converted-space"> </span>value="huschka@eventdesign.com"&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;label&gt;Passwort&lt;/label&gt;</p>
-<p class="p2">&lt;input id="password" type="password"</p>
-<p class="p2"><span class="Apple-converted-space"> </span>autocomplete="current-password"&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;button id="login"&gt;Anmelden&lt;/button&gt;</p>
-<p class="p2">&lt;button id="test" disabled&gt;</p>
-<p class="p2"><span class="Apple-converted-space"> </span>GitHub-Verbindung testen</p>
-<p class="p2">&lt;/button&gt;</p>
-<p class="p2">&lt;button id="logout" disabled&gt;Abmelden&lt;/button&gt;</p>
-<p class="p2">&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;div class="card"&gt;</p>
-<p class="p2">&lt;h3&gt;Testergebnis&lt;/h3&gt;</p>
-<p class="p2">&lt;pre id="result"&gt;Noch kein Test.&lt;/pre&gt;</p>
-<p class="p2">&lt;/div&gt;</p>
-<p class="p2">&lt;/main&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;script type="module"&gt;</p>
-<p class="p2">import { createClient } from</p>
-<p class="p2"><span class="Apple-converted-space">  </span>"https://esm.sh/@supabase/supabase-js@2";</p>
-<p class="p1"><br></p>
-<p class="p2">const projectUrl =</p>
-<p class="p2"><span class="Apple-converted-space">  </span>"https://qijordwpbwwbizfcslrv.supabase.co";</p>
-<p class="p1"><br></p>
-<p class="p2">const expectedUID =</p>
-<p class="p2"><span class="Apple-converted-space">  </span>"9be7d1bc-4d69-4cb8-bb42-cb2d3c705f75";</p>
-<p class="p1"><br></p>
-<p class="p2">let supabase = null;</p>
-<p class="p2">const $ = id =&gt; document.getElementById(id);</p>
-<p class="p1"><br></p>
-<p class="p2">function show(text) {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>$("result").textContent = text;</p>
-<p class="p2">}</p>
-<p class="p1"><br></p>
-<p class="p2">function state(text) {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>$("status").textContent = text;</p>
-<p class="p2">}</p>
-<p class="p1"><br></p>
-<p class="p2">function lock(ready) {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>$("test").disabled = !ready;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>$("logout").disabled = !ready;</p>
-<p class="p2">}</p>
-<p class="p1"><br></p>
-<p class="p2">$("login").onclick = async () =&gt; {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>$("login").disabled = true;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>lock(false);</p>
-<p class="p2"><span class="Apple-converted-space">  </span>state("🟡 Anmeldung läuft...");</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">  </span>try {</p>
-<p class="p2"><span class="Apple-converted-space">    </span>const key = $("key").value.trim();</p>
-<p class="p2"><span class="Apple-converted-space">    </span>if (!key.startsWith("sb_publishable_")) {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>throw new Error(</p>
-<p class="p2"><span class="Apple-converted-space">        </span>"Bitte Publishable Key eintragen."</p>
-<p class="p2"><span class="Apple-converted-space">      </span>);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>supabase = createClient(projectUrl, key, {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>auth: {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>persistSession: false,</p>
-<p class="p2"><span class="Apple-converted-space">        </span>autoRefreshToken: false,</p>
-<p class="p2"><span class="Apple-converted-space">        </span>detectSessionInUrl: false</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>const {data,error} =</p>
-<p class="p2"><span class="Apple-converted-space">      </span>await supabase.auth.signInWithPassword({</p>
-<p class="p2"><span class="Apple-converted-space">        </span>email: $("email").value.trim(),</p>
-<p class="p2"><span class="Apple-converted-space">        </span>password: $("password").value</p>
-<p class="p2"><span class="Apple-converted-space">      </span>});</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>$("password").value = "";</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>if (error) throw error;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>if (data.user?.id !== expectedUID) {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>await supabase.auth.signOut();</p>
-<p class="p2"><span class="Apple-converted-space">      </span>throw new Error("Benutzer-ID stimmt nicht.");</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>state("🟢 Supabase-Anmeldung erfolgreich");</p>
-<p class="p2"><span class="Apple-converted-space">    </span>show("Angemeldet. Jetzt GitHub testen.");</p>
-<p class="p2"><span class="Apple-converted-space">    </span>lock(true);</p>
-<p class="p2"><span class="Apple-converted-space">  </span>} catch(e) {</p>
-<p class="p2"><span class="Apple-converted-space">    </span>$("password").value = "";</p>
-<p class="p2"><span class="Apple-converted-space">    </span>state("🔴 Anmeldung fehlgeschlagen");</p>
-<p class="p2"><span class="Apple-converted-space">    </span>show(e.message);</p>
-<p class="p2"><span class="Apple-converted-space">  </span>} finally {</p>
-<p class="p2"><span class="Apple-converted-space">    </span>$("login").disabled = false;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2">};</p>
-<p class="p1"><br></p>
-<p class="p2">$("test").onclick = async () =&gt; {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>$("test").disabled = true;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>state("🟡 GitHub wird geprüft...");</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">  </span>try {</p>
-<p class="p2"><span class="Apple-converted-space">    </span>const {data,error} =</p>
-<p class="p2"><span class="Apple-converted-space">      </span>await supabase.functions.invoke(</p>
-<p class="p2"><span class="Apple-converted-space">        </span>"github-app-storage",</p>
-<p class="p2"><span class="Apple-converted-space">        </span>{body:{}}</p>
-<p class="p2"><span class="Apple-converted-space">      </span>);</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>if (error) {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>let details = error.message;</p>
-<p class="p2"><span class="Apple-converted-space">      </span>if (error.context instanceof Response) {</p>
-<p class="p2"><span class="Apple-converted-space">        </span>const response = error.context;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>details += " (HTTP " + response.status + ")";</p>
-<p class="p2"><span class="Apple-converted-space">        </span>details += "\n" + await response.text();</p>
-<p class="p2"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><span class="Apple-converted-space">      </span>throw new Error(details);</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>show(JSON.stringify(data,null,2));</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>if (data?.ok &amp;&amp;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>data?.githubConnected === true &amp;&amp;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>data?.private === true &amp;&amp;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>data?.repository ===</p>
-<p class="p2"><span class="Apple-converted-space">          </span>"phusch/huschel-app-data") {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>state("🟢 GitHub-Verbindung erfolgreich");</p>
-<p class="p2"><span class="Apple-converted-space">    </span>} else {</p>
-<p class="p2"><span class="Apple-converted-space">      </span>state("🔴 GitHub-Prüfung fehlgeschlagen");</p>
-<p class="p2"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span>} catch(e) {</p>
-<p class="p2"><span class="Apple-converted-space">    </span>state("🔴 Verbindungstest fehlgeschlagen");</p>
-<p class="p2"><span class="Apple-converted-space">    </span>show(e.message);</p>
-<p class="p2"><span class="Apple-converted-space">  </span>} finally {</p>
-<p class="p2"><span class="Apple-converted-space">    </span>$("test").disabled = false;</p>
-<p class="p2"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2">};</p>
-<p class="p1"><br></p>
-<p class="p2">$("logout").onclick = async () =&gt; {</p>
-<p class="p2"><span class="Apple-converted-space">  </span>if (supabase) await supabase.auth.signOut();</p>
-<p class="p2"><span class="Apple-converted-space">  </span>lock(false);</p>
-<p class="p2"><span class="Apple-converted-space">  </span>state("🟡 Abgemeldet");</p>
-<p class="p2"><span class="Apple-converted-space">  </span>show("Sitzung beendet.");</p>
-<p class="p2">};</p>
-<p class="p2">&lt;/script&gt;</p>
-<p class="p2">&lt;/body&gt;</p>
-<p class="p2">&lt;/html&gt;</p>
+<main>
+<h2>Huschel App Speicher</h2>
+<div id="status">🟡 Noch nicht angemeldet</div>
+<div class="card">
+<label for="key">Supabase Publishable Key</label>
+<input id="key" placeholder="sb_publishable_..." autocomplete="off" spellcheck="false">
+<label for="email">E-Mail</label>
+<input id="email" type="email" value="huschka@eventdesign.com" autocomplete="username">
+<label for="password">Passwort</label>
+<input id="password" type="password" autocomplete="current-password">
+<button id="login">Anmelden</button>
+<button id="test" disabled>GitHub-Verbindung testen</button>
+<button id="logout" disabled>Abmelden</button>
+<small>Nur Publishable Key eintragen. Niemals GitHub-Token oder Supabase Secret Key verwenden. Es werden keine GitHub-Daten verändert.</small>
+</div>
+<div class="card"><h3>Testergebnis</h3><pre id="result">Noch kein Test.</pre></div>
+</main>
+<script type="module">
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+const projectUrl = "https://qijordwpbwwbizfcslrv.supabase.co";
+const expectedUID = "9be7d1bc-4d69-4cb8-bb42-cb2d3c705f75";
+let supabase = null;
+const $ = id => document.getElementById(id);
+function show(text) { $("result").textContent = text; }
+function state(text) { $("status").textContent = text; }
+function lock(ready) {
+  $("test").disabled = !ready;
+  $("logout").disabled = !ready;
+}
+$("login").onclick = async () => {
+  $("login").disabled = true;
+  lock(false);
+  state("🟡 Anmeldung läuft...");
+  try {
+    const key = $("key").value.trim();
+    if (!key.startsWith("sb_publishable_")) throw new Error("Bitte Publishable Key eintragen.");
+    supabase = createClient(projectUrl, key, {
+      auth: { persistSession:false, autoRefreshToken:false, detectSessionInUrl:false }
+    });
+    const {data,error} = await supabase.auth.signInWithPassword({
+      email:$("email").value.trim(), password:$("password").value
+    });
+    $("password").value = "";
+    if (error) throw error;
+    if (data.user?.id !== expectedUID) {
+      await supabase.auth.signOut();
+      throw new Error("Benutzer-ID stimmt nicht.");
+    }
+    state("🟢 Supabase-Anmeldung erfolgreich");
+    show("Angemeldet. Jetzt GitHub testen.");
+    lock(true);
+  } catch(e) {
+    $("password").value = "";
+    state("🔴 Anmeldung fehlgeschlagen");
+    show(e.message);
+  } finally { $("login").disabled = false; }
+};
+$("test").onclick = async () => {
+  $("test").disabled = true;
+  state("🟡 GitHub wird geprüft...");
+  try {
+    const {data,error} = await supabase.functions.invoke("github-app-storage", {body:{}});
+    if (error) {
+      let details = error.message;
+      if (error.context instanceof Response) {
+        const response = error.context;
+        details += " (HTTP " + response.status + ")";
+        details += "\n" + await response.text();
+      }
+      throw new Error(details);
+    }
+    show(JSON.stringify(data,null,2));
+    if (data?.ok && data?.githubConnected === true &&
+        data?.private === true && data?.repository === "phusch/huschel-app-data") {
+      state("🟢 GitHub-Verbindung erfolgreich");
+    } else { state("🔴 GitHub-Prüfung fehlgeschlagen"); }
+  } catch(e) {
+    state("🔴 Verbindungstest fehlgeschlagen");
+    show(e.message);
+  } finally { $("test").disabled = false; }
+};
+$("logout").onclick = async () => {
+  if (supabase) await supabase.auth.signOut();
+  lock(false);
+  state("🟡 Abgemeldet");
+  show("Sitzung beendet.");
+};
+</script>
 </body>
 </html>
